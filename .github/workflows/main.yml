@@ -231,10 +231,10 @@ jobs:
           sudo cp -a ${ROOT_PATH}/build_env/ds.${{ matrix.platform }}-${{ matrix.version }}/source/output ${ROOT_PATH}/source/
 
     
-       - name: GCC 12
-         if: startsWith(env.CCVER, '12') && startsWith(env.KVER, '4')
-         shell: python
-         run: |
+      - name: GCC 12
+        if: startsWith(env.CCVER, '12') && startsWith(env.KVER, '4')
+        shell: python
+        run: |
            # -*- coding: utf-8 -*-
      
            import sys, os, re
