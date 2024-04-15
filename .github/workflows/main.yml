@@ -126,7 +126,7 @@ jobs:
           
       - name: Cache EnvDeploy
         id: cache-env
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         env:
           cache-name: cache-env
         with:
@@ -287,7 +287,7 @@ jobs:
           tar caf ${{ github.workspace }}/source/${{ matrix.platform }}-${{ env.KVER }}.tgz -C ${{ github.workspace }}/source/output .
 
       - name: Upload to Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: iptables
           path: |
