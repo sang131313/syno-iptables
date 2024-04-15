@@ -116,7 +116,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@main
+        uses: actions/checkout@epyc7002
 
       - name: Init Env
         run: |
